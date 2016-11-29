@@ -32,10 +32,7 @@
   "main": "./lib/index.js",
   "module": "./lib/index.es.js",
   "jsnext:main": "./lib/index.es.js",
-  "browser": {
-    "./locale-data/index": false,
-    "./locale-data/index.js": false
-  },
+  "browser": "./lib/browser.js",
   "browserify-shim": {
     "react": "global:React"
   },

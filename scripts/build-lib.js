@@ -40,4 +40,15 @@ bundle().then(({write}) => write({
     banner: copyright,
 }));
 
+rollup({
+    entry: p.resolve('src/browser.js'),
+    plugins: [
+        babel(babelConfig),
+    ],
+}).then(({write}) => write({
+    dest: p.resolve('lib/browser.js'),
+    format: 'cjs',
+    banner: copyright,
+}));
+
 process.on('unhandledRejection', (reason) => {throw reason;});
